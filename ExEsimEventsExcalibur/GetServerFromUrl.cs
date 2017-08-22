@@ -13,7 +13,6 @@ namespace ExEsimEventsExcalibur
         /// <returns>服务器全名</returns>
         private static string GetServerName(string url)
         {
-            //url：http(s)://#服务器名#.e-sim.org/battle.html?id=#战场ID#
             string result;
             Regex snreg = new Regex("//(.+)\\.e-sim");
             Match match = snreg.Match(url);
