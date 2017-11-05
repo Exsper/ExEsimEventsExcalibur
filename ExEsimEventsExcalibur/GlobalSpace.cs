@@ -39,6 +39,9 @@ namespace ExEsimEventsExcalibur
         //如果在xx天数内则使用易读化时间
         public static double ETRDays = 3;
 
+        //最大杯赛数量
+        public static int MaxEventCounts = 50;
+
         //设定服务器简称用
         public static Dictionary<String, String> ServerDictionary = new Dictionary<String, String>(); 
 

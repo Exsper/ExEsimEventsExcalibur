@@ -149,6 +149,12 @@ namespace ExEsimEventsExcalibur
                 Global.startcn = GetSettingsValuePra(SettingsIniSection, "TypeCn");
             }
             catch { }
+            //读取最大杯赛数量
+            try
+            {
+                Global.MaxEventCounts = Convert.ToInt32(GetSettingsValue(SettingsIniSection, "MaxEventCounts"));
+            }
+            catch { }
         }
 
         #endregion
@@ -317,8 +323,8 @@ namespace ExEsimEventsExcalibur
 
             int eventcounts = 0;
 
-            //最大30场
-            int maxeventcounts = 30;
+            //默认最大50场
+            int maxeventcounts = Global.MaxEventCounts;
 
             DateTime[] oDateTime = new DateTime[maxeventcounts];
             string[] oString = new string[maxeventcounts];
